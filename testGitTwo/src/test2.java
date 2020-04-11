@@ -6,4 +6,7 @@ public class test2 {
    public  void test2Method(){
       System.out.println("我是test2中新增的方法");
    }
+   public  void  test3(){
+      System.out.println("我是test3在test2中新增的一个方法");
+   }
 }

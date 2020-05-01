@@ -1,0 +1,43 @@
+{
+  "groups": [
+    {
+      "name": "greeting",
+      "type": "com.duyi.config.GreetingConfig",
+      "sourceType": "com.duyi.config.GreetingConfig"
+    },
+    {
+      "name": "menu",
+      "type": "com.duyi.config.MenuConfig",
+      "sourceType": "com.duyi.config.MenuConfig"
+    }
+  ],
+  "properties": [
+    {
+      "name": "greeting.content",
+      "type": "java.lang.String",
+      "sourceType": "com.duyi.config.GreetingConfig"
+    },
+    {
+      "name": "greeting.id",
+      "type": "java.lang.Long",
+      "sourceType": "com.duyi.config.GreetingConfig",
+      "defaultValue": 0
+    },
+    {
+      "name": "menu.food",
+      "type": "java.lang.String",
+      "sourceType": "com.duyi.config.MenuConfig"
+    },
+    {
+      "name": "menu.meal",
+      "type": "java.lang.String",
+      "sourceType": "com.duyi.config.MenuConfig"
+    },
+    {
+      "name": "menu.sauce",
+      "type": "java.lang.String[]",
+      "sourceType": "com.duyi.config.MenuConfig"
+    }
+  ],
+  "hints": []
+}

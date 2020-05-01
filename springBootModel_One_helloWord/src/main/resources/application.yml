@@ -1,0 +1,28 @@
+server:
+     port: 8099
+
+greeting:
+     id: 1
+     content: 张无忌
+
+menu:
+   meal: 米饭
+   food: 青椒炒肉
+   sauce:
+         - 洋葱
+         - 胡罗卜
+         - 麻辣鲜
+spring:
+    mvc:
+       view:
+          prefix: /templates/
+          suffix: .ftl
+
+        #passwprd 是我们的盐
+jasypt:
+         encryptor:
+             password: 8455@#%@
+             #通过ENC（加密后的数据）来进行解密获取到解密后的原始数据
+info:
+         username: ENC(n8L72ovN5niuGlUXJ73oaQ==)
+         password: ENC(wZSoYwDy88pj8rGVaRrGOA==)

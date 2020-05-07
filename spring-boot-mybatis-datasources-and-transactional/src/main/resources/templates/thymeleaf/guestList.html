@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <td>id</td>
+        <td>name</td>
+        <td>role</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="guest:${guests}">
+        <td th:text="${guest.id}"></td>
+        <td th:text="${guest.name}"></td>
+        <td th:text="${guest.role}"></td>
+    </tr>
+    </tbody>
+</table>
+<a href="xxx" th:href="@{/guest/toAdd}">添加</a>
+</body>
+</html>

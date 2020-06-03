@@ -1,9 +1,6 @@
 package com.duying.service;
 
 import com.duying.domain.Guest;
-import com.duying.repository.GuestRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 

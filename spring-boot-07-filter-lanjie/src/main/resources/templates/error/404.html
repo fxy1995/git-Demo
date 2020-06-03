@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+动态错误页面需要卸载 templates---erro-文件夹中 状态码.html 注意使用动态页面必须引入模板引擎的依赖否则不起作用
+<!--这里获取的是返回的出现404后系统默认返回的json信息-->
+<span th:text="${error}" ></span>
+<span th:text="${status}" ></span>
+</body>
+</html>

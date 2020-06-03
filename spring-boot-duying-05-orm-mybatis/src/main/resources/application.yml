@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/testjapguest?serverTimezone=CST
+    username: root
+    password: root
+#mybatis:
+#  config-location: classpath:mybatisConfig.xml
+
+#mybatis:
+#  mapper-locations: classpath:/mybatis/mapper/*.xml
+#  type-aliases-package: com.duying.domain
+#系统能够通过mapper（dao）类上对1·注解@Mapper就能够定位到mapper（相当于定位到Mapper配置文件）
+#但是 光获取到mapper类还行不行呀---此时我们下相当于只定义了mapper中得namespace
+#还需要sql语句呀 -
+            #我们通过在 方法 上定义sql注解，注解中写SQL语句
+   # 例如
+    #@select("select * from guest")
+     #list<Guest> getGuestAll();
+server:
+  port: 8080

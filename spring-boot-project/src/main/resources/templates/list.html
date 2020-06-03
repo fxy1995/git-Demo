@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="#{list.title}">Title</title>
+</head>
+<a th:href="@{/data/list(f='zh_CN')}" th:text="中文"></a>
+<a th:href="@{/data/list(f='en_US')}">english</a>
+<table>
+    <thead><tr><td th:text="#{list.area}">地区</td><td th:text="#{list.nowConfirm}">现有确诊</td><td th:text="#{list.confirm}">累计确诊</td><td th:text="#{list.heal}">治愈人数</td><td th:text="#{list.dead}">死亡人数</td></tr></thead>
+    <tbody>
+    <tr th:each="data:${datas}">
+        <td th:text="${data.area}"></td>
+        <td th:text="${data.nowConfirm}"></td>
+        <td th:text="${data.confirm}"></td>
+        <td th:text="${data.heal}"></td>
+        <td th:text="${data.dead}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

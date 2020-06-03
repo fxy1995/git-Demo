@@ -17,10 +17,12 @@ spring:
        view:
           prefix: /templates/
           suffix: .ftl
-        
-jasypt: 
-         encryptor: 
+
+        #passwprd 是我们的盐
+jasypt:
+         encryptor:
              password: 8455@#%@
+             #通过ENC（加密后的数据）来进行解密获取到解密后的原始数据
 info:
          username: ENC(n8L72ovN5niuGlUXJ73oaQ==)
          password: ENC(wZSoYwDy88pj8rGVaRrGOA==)

@@ -1,0 +1,27 @@
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        #自定义访问路径  -增强安全性
+      base-path: /customMonitor
+  server:
+      #自定义监控的端口号-注意不是工程的端口-只是访问监控时的端口--增强了安全性
+      port: 8090
+
+
+  #  endpoint:
+#    env:
+#      enabled: false
+  endpoint:
+    shutdown:
+      enabled: true
+    health:
+      show-details: always
+#引入完成security插件后，我们设置访问时的账户密码
+spring:
+  security:
+    user:
+      name: zhangsan
+      password: 123

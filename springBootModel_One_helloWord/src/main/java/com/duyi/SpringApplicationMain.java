@@ -5,6 +5,7 @@ import com.duyi.config.MenuConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.boot.web.servlet.ServletComponentScan;
 
 /**
  * @Author 付雪缘
@@ -12,6 +13,7 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
  * @Version 1.0
  */
 //这个注解表示标注这是一个springboot应用的入口
+//    @ServletComponentScan
 @SpringBootApplication
 @EnableConfigurationProperties({GreetingConfig.class, MenuConfig.class})
 public class SpringApplicationMain {

@@ -1,5 +1,7 @@
 package com.duing.controller;
 
+import com.duing.component.MailComponent;
+import com.duing.component.MailComponent2;
 import com.duing.domain.DataBean;
 import com.duing.service.DataServiceImp;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,9 +21,22 @@ import java.util.List;
 @RequestMapping("/data")
 public class DataController {
     @Autowired
+    private MailComponent mailComponent;
+    @Autowired
+    private  MailComponent2 mailComponent2;
+    @Autowired
     private DataServiceImp dataServiceImp;
     @GetMapping("/list")
     public String list(Model model){
+//        //测试邮件发送-随便写在这里测试一下
+//        mailComponent.send();
+        //测试邮件发送-随便写在这里测试一下
+        try {
+            mailComponent2.send();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        //正常的数据展示
         List<DataBean> list=dataServiceImp.list();
         model.addAttribute("datas",list);
         return "list";

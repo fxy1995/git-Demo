@@ -56,34 +56,34 @@ dataService.saveBatch(dataList);//把集合中的数都添加到数据库中
     }
 //这个方法用来获取数据
 public static   ArrayList<DataBean> getData(){
-    String str= HttpURLConnectionUtil.doGet(url);
-      Gson gson=new Gson();
-      Map map=gson.fromJson(str, Map.class);
-     // 此时map中有两个值-注意data得value值是字符串并不是json数据
-    //把data字符串再进行处理成json
-    String subStr=(String) map.get("data");
-    Map dataMap=gson.fromJson(subStr,Map.class);
-        //获取所有国家的疫情信息
-   ArrayList    areaList =(ArrayList)dataMap.get("areaTree");
-        System.out.println(areaList);
-        //获取中国的疫情信息
-     LinkedTreeMap chinaMap=(LinkedTreeMap) areaList.get(0);
-       System.out.println(chinaMap);
-       ArrayList<DataBean> result=new ArrayList<>();
- ArrayList city=(ArrayList) chinaMap.get("children");
-        System.out.println(city);
-        for (int i=0;i<city.size();i++){
-            Map cityMap=(Map) city.get(i);
-           String name=(String) cityMap.get("name");
-           Map totalMap=(Map) cityMap.get("total");
-           double confirm=(double)totalMap.get("confirm");//累计确诊
-           double heal=(double)totalMap.get("heal");//治愈
-          double dead=(double)totalMap.get("dead");//死亡
-          double nowConfirm=(double)totalMap.get("nowConfirm"); //现有确诊
-          DataBean dataBean=new DataBean(null,name,(int)confirm,(int)dead,(int)heal,(int)nowConfirm);
-          result.add(dataBean);
-        }
-       return result;
+//    String str= HttpURLConnectionUtil.doGet(url);
+//      Gson gson=new Gson();
+//      Map map=gson.fromJson(str, Map.class);
+//     // 此时map中有两个值-注意data得value值是字符串并不是json数据
+//    //把data字符串再进行处理成json
+//    String subStr=(String) map.get("data");
+//    Map dataMap=gson.fromJson(subStr,Map.class);
+//        //获取所有国家的疫情信息
+//   ArrayList    areaList =(ArrayList)dataMap.get("areaTree");
+//        System.out.println(areaList);
+//        //获取中国的疫情信息
+//     LinkedTreeMap chinaMap=(LinkedTreeMap) areaList.get(0);
+//       System.out.println(chinaMap);
+//       ArrayList<DataBean> result=new ArrayList<>();
+// ArrayList city=(ArrayList) chinaMap.get("children");
+//        System.out.println(city);
+//        for (int i=0;i<city.size();i++){
+//            Map cityMap=(Map) city.get(i);
+//           String name=(String) cityMap.get("name");
+//           Map totalMap=(Map) cityMap.get("total");
+//           double confirm=(double)totalMap.get("confirm");//累计确诊
+//           double heal=(double)totalMap.get("heal");//治愈
+//          double dead=(double)totalMap.get("dead");//死亡
+//          double nowConfirm=(double)totalMap.get("nowConfirm"); //现有确诊
+//          DataBean dataBean=new DataBean(null,name,(int)confirm,(int)dead,(int)heal,(int)nowConfirm);
+//          result.add(dataBean);
+//        }
+       return new ArrayList<>();
     }
 
 }
